@@ -1,0 +1,32 @@
+# Haskell
+
+# Compiled source #
+###################
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+
+# Packages #
+############
+*.cabal
+dist/
+
+# IDE #
+#######
+.vscode/
+
+# Misc #
+########
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl
+*.bak
+*.dSYM/
+.DS_Store
+.stack-work/
+.ghc.environment.*
