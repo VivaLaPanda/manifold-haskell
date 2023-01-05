@@ -1,4 +1,7 @@
-module Types where
+{-# LANGUAGE DuplicateRecordFields #-}
+
+module Types (Bet (..), LiteMarket (..), Market (..), Group (..), LiteUser (..)) where
+import Data.Text
 
 -- Data types for the resources
 data Bet = Bet {
@@ -48,7 +51,7 @@ data LiteMarket = LiteMarket {
     tags :: [Text],
     
     outcomeType :: Text,
-    pool :: Maybe Pool,
+    pool :: Maybe Text,
     volume7Days :: Float,
     volume24Hours :: Float,
     isResolved :: Bool,
@@ -73,7 +76,7 @@ data LiteMarket = LiteMarket {
 data Market = Market {
     bets :: [Bet],
     comments :: [Comment],
-    answers :: Maybe [Answer],
+    answers :: Maybe [Text],
     
     id :: Text,
     
@@ -88,7 +91,7 @@ data Market = Market {
     tags :: [Text],
     
     outcomeType :: Text,
-    pool :: Maybe Pool,
+    pool :: Maybe Text,
     volume7Days :: Float,
     volume24Hours :: Float,
     isResolved :: Bool,
